@@ -37,6 +37,7 @@ gem 'importmap-rails'
 gem 'hamlit'
 gem 'better_errors'
 gem 'binding_of_caller'
+gem 'annotate'
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
