@@ -32,6 +32,7 @@ gem 'tzinfo-data', platforms: %i[ windows jruby ]
 gem 'bootsnap', require: false
 
 gem 'annotate'
+gem 'aws-sdk-s3', require: false
 gem 'better_errors'
 gem 'binding_of_caller'
 gem 'devise'
@@ -53,6 +54,7 @@ group :development, :test do
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem 'rubocop-rails-omakase', require: false
 
+  gem 'dotenv-rails'
   gem 'pry-byebug'
   gem 'rubocop-rails'
 end
