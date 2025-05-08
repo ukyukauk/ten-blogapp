@@ -7,8 +7,12 @@ import "@rails/actiontext"
 import jquery from "jquery";
 window.$ = jquery;
 
-document.addEventListener('DOMContentLoaded', () => {
-  $('.article_title').on('click', () => {
-    window.alert('CLICKED')
-  })
-})
+import axios from 'axios'
+
+document.addEventListener("turbo:load", () => {
+  $(".article_title").on("click", () => {
+    axios.get("/").then((response) => {
+      console.log(response);
+    });
+  });
+});
