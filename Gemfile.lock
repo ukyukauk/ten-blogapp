@@ -427,7 +427,6 @@ PLATFORMS
 
 DEPENDENCIES
   active_model_serializers
-  active_decorator
   annotate
   aws-sdk-s3
   better_errors
