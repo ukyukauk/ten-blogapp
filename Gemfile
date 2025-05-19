@@ -31,6 +31,7 @@ gem 'tzinfo-data', platforms: %i[ windows jruby ]
 gem 'bootsnap', require: false
 
 gem 'active_model_serializers'
+gem 'active_decorator'
 gem 'annotate'
 gem 'aws-sdk-s3', require: false
 gem 'better_errors'
