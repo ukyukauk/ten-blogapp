@@ -30,8 +30,8 @@ gem 'tzinfo-data', platforms: %i[ windows jruby ]
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', require: false
 
-gem 'active_model_serializers'
 gem 'active_decorator'
+gem 'active_model_serializers'
 gem 'annotate'
 gem 'aws-sdk-s3', require: false
 gem 'better_errors'
@@ -42,6 +42,7 @@ gem 'hamlit'
 gem 'importmap-rails'
 gem 'psych', '~> 3.1'
 gem 'sassc-rails'
+gem 'sidekiq'
 gem 'webpacker', '~> 4.0', '>= 4.0.7'
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
@@ -65,9 +66,9 @@ end
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem 'erb2haml'
-  gem 'web-console'
   gem 'letter_opener'
   gem 'letter_opener_web', '~> 3.0'
+  gem 'web-console'
 end
 
 group :test do
