@@ -30,16 +30,16 @@ document.addEventListener("turbo:load", () => {
   const dataset = $("#article-show").data();
   const articleId = dataset.articleId;
 
-  axios.get(`/articles/${articleId}/comments`)
+  axios.get(`/api/articles/${articleId}/comments`)
     .then((response) => {
-      const comments = response.data
+      const comments = response.data;
       comments.forEach((comment) => {
-        appendNewComment(comment)
-      })
+        appendNewComment(comment);
+      });
     })
-    .catch((error => {
-      window.alert('失敗！')
-    }))
+    .catch((error) => {
+      window.alert("失敗！");
+    });
 
   handleCommentForm()
 
@@ -48,21 +48,20 @@ document.addEventListener("turbo:load", () => {
     if (!content) {
       window.alert('コメントを入力してください')
     } else {
-      axios.post(`/articles/${articleId}/comments`, {
-        comment: {content: content}
-      })
-        .then((res) => {
-          const comment = res.data
-          appendNewComment(comment)
-          $("#comment_content").val('');
+      axios.post(`/api/articles/${articleId}/comments`, {
+          comment: { content: content },
         })
+        .then((res) => {
+          const comment = res.data;
+          appendNewComment(comment);
+          $("#comment_content").val("");
+        });
     }
   })
 
-  axios.get(`/articles/${articleId}/like`)
-    .then((response) => {
-      const hasLiked = response.data.hasLiked;
-      handleHeartDisplay(hasLiked);
+  axios.get(`/api/articles/${articleId}/like`).then((response) => {
+    const hasLiked = response.data.hasLiked;
+    handleHeartDisplay(hasLiked);
   });
 
   listenInactiveHeartEvent(articleId);
