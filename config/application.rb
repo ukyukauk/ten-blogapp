@@ -13,7 +13,8 @@ module Blogapp
 
     Bundler.require(*Rails.groups)
     if ['development', 'test'].include? ENV['RAILS_ENV']
-      Dotenv::Railtie.load
+      # Dotenv::Railtie.load
+      Dotenv::Rails.load
     end
 
     config.active_storage.variant_processor = :mini_magick
